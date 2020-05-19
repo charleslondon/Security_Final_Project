@@ -18,7 +18,6 @@ import org.oopda.security.alarm.WindowAlarm;
  */
 public class CommandLine 
 {
-
 	public static void main(String[] args) 
 	{
 		Scanner in = new Scanner(System.in);
@@ -76,15 +75,12 @@ public class CommandLine
 				
 				switch(alarm.getStatus()) 
 				{
-					case PREPARING:
-					case ACTIVATED:
-						alarm.setStatus(AlarmStatus.ARMED);
-						break;
-					case ARMED:
-						alarm.setStatus(AlarmStatus.ACTIVATED);
-						break;
-					default:
-						break;
+					case PREPARING, ACTIVATED -> alarm.setStatus(AlarmStatus.ARMED);
+					case ARMED -> alarm.setStatus(AlarmStatus.ACTIVATED);
+					default -> {
+						System.out.println("Invalid Alarm Type");
+						System.exit(1);
+					}
 				}
 			}
 		}
