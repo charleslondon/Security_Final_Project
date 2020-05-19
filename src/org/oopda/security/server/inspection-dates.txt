@@ -1,0 +1,7 @@
+Bedroom,AB,3/4/2014
+Patio,BG,1/2/2014
+Bathroom,TD,5/23/2014
+Living Room,JM,6/24/2014
+Living Room,JM,6/25/2014
+Living Room,JM,6/26/2014
+Patio,BG,1/9/2014
